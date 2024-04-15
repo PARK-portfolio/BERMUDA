@@ -1,0 +1,930 @@
+@charset "UTF-8";
+
+@import url('https://webfontworld.github.io/pretendard/Pretendard.css');
+@import url('https://webfontworld.github.io/score/SCoreDream.css');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Pretendard';
+    font-size: 16px;
+    min-width: 1320px;
+}
+
+a {
+    color: #1c1c1c;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+body::-webkit-scrollbar {
+    /*스크롤바 전체*/
+    width: 10px;
+    height: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    /*스크롤바 막대*/
+    background-color: #555;
+    border-radius: 3px;
+    background-clip: padding-box;
+}
+body::-webkit-scrollbar-track {
+    /*스크롤바 막대 외부*/
+    background-color: #1c1c1c;
+    /* box-shadow: inset 0px 0px 5px #666; */
+}
+
+/* 탑버튼 */
+#scroll-to-top {
+    display: block;
+    position: fixed;
+    bottom: 50px;
+    right: calc(((100% - 1320px) / 2) - 90px);
+    opacity: 0;
+    z-index: 10;
+    transform: translateY(30%);
+    transition: all 0.5s ease-in-out;
+    border-radius: 100px;
+    overflow: hidden;
+}
+#scroll-to-top img{
+    transition: all 0.15s;
+}
+#scroll-to-top img:hover {
+    /* opacity: 0.8; */
+    filter: invert(1);
+}
+
+/* 탑 */
+.top {
+    background: #000;
+    /* height: 32px; */
+}
+
+.top>ul {
+    width: 1320px;
+    margin: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: right;
+}
+
+.top li {
+    padding: 6px 0;
+}
+
+.top a {
+    color: #fff;
+    margin-right: 20px;
+}
+.top span{
+    position: relative;
+}
+.top b {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transform: scalex(0);
+    transition: all 1s;
+    transform-origin: left;
+}
+
+.top a:hover b{
+    transform: scalex(1);
+}
+
+/* 네비 */
+nav {
+    background: #fff;
+}
+
+nav div {
+    width: 1320px;
+    height: 100px;
+    margin: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.main {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 25px;
+}
+
+.main li {
+    width: 100%;
+    position: relative;
+}
+
+.main>li>a {
+    font-family: 'SCoreDream';
+    display: block;
+    font-weight: 600;
+    color: #232E66;
+    font-size: 24px;
+    margin: 33px 25px;
+    text-transform: capitalize;
+    transition: all 0.3s
+}
+
+.main>li:hover>a {
+    opacity: 0.5;
+}
+
+.sub a {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    color: #232E66;
+    background-color: #fff;
+    padding: 15px 0;
+    transition: all 0.1s
+}
+
+.sub a:hover {
+    color: #fff;
+    background-color: #232E66;
+}
+
+.sub {
+    position: absolute;
+    display: none;
+    width: 100%;
+}
+
+/* 메인배너 */
+.main_b {
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+    display: block;
+}
+
+/* 섹션1 팀 */
+.team {
+    width: 90%;
+    margin: 160px auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team h1 {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.team div {
+    position: relative;
+}
+
+.team a {
+    width: 24.5%;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.team_logo {
+    width: 85%;
+    display: block;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 4;
+    transition: all 0.5s;
+    /* 로고를 서서히 나타나게 하려면 여기에 해야함 */
+}
+
+.team_img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.team>a:hover .team_logo {
+    opacity: 1;
+}
+
+.team>a:hover .team_img {
+    filter: brightness(0.6);
+    transform: scale(1.05);
+}
+
+/* 뉴스 섹션2 */
+.news>div {
+    width: 1320px;
+    margin: auto;
+    position: relative;
+}
+
+.news h1 {
+    text-align: center;
+}
+
+.news h3 {
+    font-weight: 400;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 35px;
+}
+
+.news h3 span{
+    position: relative;
+}
+.news h3 b{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #1c1c1c;
+    bottom: 0;
+    left: 0;
+    transform: scalex(0);
+    transition: all 1s;
+    transform-origin: left;
+}
+
+.news h3 a:hover b{
+    transform: scalex(1);
+}
+.txt {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 70px 0;
+    box-sizing: border-box;
+    position: relative;
+    opacity: 0;
+}
+
+.news h2 {
+    height: 78px;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0 25px;
+    font-family: 'SCoreDream';
+}
+
+.news p {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0 25px;
+}
+
+.news_day {
+    position: absolute;
+    left: 0px;
+    bottom: 70px;
+}
+
+.news ul {
+    width: 1320px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+}
+.news li {
+    width: 430px;
+    height: 380px;
+    position: relative;
+}
+
+.news_black {
+    width: 430px;
+    height: 380px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.news_1 {
+    background: url(../image/index/news_1.png) no-repeat center center;
+    background-size: cover;
+}
+
+.news_2 {
+    background: url(../image/index/news_2.png) no-repeat center center;
+    background-size: cover;
+}
+
+.news_3 {
+    background: url(../image/index/news_3.png) no-repeat center center;
+    background-size: cover;
+}
+
+.news li:hover .txt {
+    opacity: 1;
+}
+
+.news li:hover .news_black {
+    filter: brightness(0.3);
+}
+
+/* 섹션3 스토어 */
+.bg_black {
+    background-color: #000;
+    margin: 160px auto;
+    padding: 90px 0 120px;
+    overflow: hidden;
+}
+
+.store {
+    width: 1320px;
+    margin: auto;
+    position: relative;
+}
+
+.list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+}
+
+.store_go {
+    width: 300px !important;
+    height: 420px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.store>h1 {
+    color: #fff;
+}
+
+.str_img {
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+
+.store img {
+    width: 100%;
+    height: 100%;
+}
+
+.store_go {
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.store_go a {
+    display: block;
+    width: 300px;
+    height: 420px;
+}
+
+.store_go a h2 {
+    color: #000;
+    padding: 30px 0 0 20px;
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 8px;
+    transition: all 0.2s;
+    position: absolute;
+    z-index: 10;
+}
+
+.store_go a h3 {
+    color: #000;
+    width: 162px;
+    padding: 74px 0 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+    background: url(./image/index/arrow_black.png) no-repeat 100% 95%;
+    transition: all 0.2s;
+    z-index: 11;
+    position: absolute;
+}
+
+.str_go_bc {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.str_go_bc_hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.5s;
+}
+
+.store_go a:hover h2 {
+    color: #fff;
+}
+
+.store_go a:hover h3 {
+    color: #fff;
+    background: url(./image/index/arrow_white.png) no-repeat 100% 95%;
+}
+
+.store_go a:hover .str_go_bc_hover {
+    opacity: 1;
+}
+
+/* 스토어 리스트 */
+.store h4 {
+    display: block;
+    font-size: 12px;
+    height: 14px;
+    font-weight: 900;
+    color: #DF2626;
+    padding: 12px 0 2px 10px;
+}
+
+.store h2 {
+    font-size: 20px;
+    height: 48px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.store h3 {
+    padding: 14px 0 0 10px;
+    font-size: 14px;
+    font-weight: 200;
+    color: #666;
+}
+
+/* 슬라이드 */
+.store .store_mySwiper {
+    height: 420px;
+    width: 1290px;
+    position: absolute;
+    left: 320px;
+}
+
+.store .store_mySwiper .swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    width: 300px !important;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.store store_mySwiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 섹션4 스케쥴 */
+.schedule {
+    margin: 140px auto;
+    width: 1320px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.schedule h1 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.cal {
+    border: 1px solid #333;
+    border-radius: 10px;
+    text-align: center;
+    width: 850px;
+    height: 653px;
+    font-size: 32px;
+    padding: 20px 0 25px;
+    box-sizing: border-box;
+    border-spacing: 54px 18px;
+}
+
+.schedule_month {
+    font-size: 42px;
+    font-weight: 700 !important;
+    color: #000 !important;
+    text-align: left;
+}
+
+.cal th {
+    font-weight: 500;
+    font-size: 42px;
+}
+
+.cal td {
+    font-weight: 200;
+    /* background-color: #E9E8EE; */
+    width: 60px;
+    height: 56px;
+    position: relative;
+}
+
+.schedule_red {
+    color: #DF2626 !important;
+}
+
+.schedule_blue {
+    color: #2638df !important;
+}
+
+.schedule_circle {
+    border: 1px solid #000000;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.sche_white {
+    color: #fff !important;
+}
+
+.schbg {
+    background-color: #000000;
+}
+
+.schedule_circle a {
+    display: block;
+}
+
+
+/* 캘린더 클릭시 팝업 */
+.schedule_click {
+    width: 440px;
+    height: 653px;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.schedule_click>div {
+    padding: 36px 30px 0 30px;
+}
+
+.schedule_click h2 {
+    font-size: 30px;
+    height: 35px;
+    margin-bottom: 24px;
+}
+
+.schedule_square {
+    border: 1px solid #1c1c1c;
+    border-radius: 10px;
+    width: 380px;
+    height: 140px;
+    margin: 15px 0;
+    box-sizing: border-box;
+}
+
+.schedule_base .schedule_square {
+    border-color: #999;
+}
+
+.schedule_txt {
+    position: relative;
+}
+
+.schedule_txt h5 {
+    font-size: 16px;
+    font-weight: 200;
+    position: absolute;
+    left: 30px;
+    top: 23px;
+}
+
+.schedule_txt h4 {
+    font-size: 40px;
+    font-weight: 100;
+    position: absolute;
+    left: 30px;
+    bottom: 24px;
+}
+
+.schedule_txt h3 {
+    font-size: 60px;
+    font-weight: 700;
+    position: absolute;
+    left: 79px;
+    bottom: 19px;
+}
+
+.schedule_txt h6 {
+    font-size: 20px;
+    font-weight: 200;
+    position: absolute;
+    right: 93px;
+    bottom: 31px;
+}
+
+/* .schedule_live {
+    background: #E9E8EE;
+} */
+.schedule_live {
+    background: #000000;
+    color: #fff;
+}
+
+.schedule_live span {
+    font-size: 16px;
+    font-weight: 100;
+    padding: 2px 11px;
+    background: #DF2626;
+    color: #fff;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
+
+.schedule>div>div {
+    position: absolute;
+}
+
+.schedule_click_off {
+    display: none;
+}
+
+/* 미니배너 */
+.mini_b {
+    width: 100%;
+    max-width: 1920px;
+    display: block;
+    margin: 140px auto 160px;
+}
+
+/* 섹션5 컨텐츠 */
+.contents {
+    width: 1320px;
+    margin: 160px auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.contents h1 {
+    width: 100%;
+}
+
+.con_box {
+    width: 320px;
+    height: 320px;
+    margin-bottom: 13px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.con_box img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.contents h2 {
+    width: 100%;
+    margin: 50px 0 20px;
+    font-family: 'SCoreDream';
+}
+
+.con_box:hover img {
+    transform: scale(1.05);
+    transition: all 0.2s;
+}
+
+.sns_box {
+    width: 350px;
+    margin: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns_box a {
+    transition: all 0.2s;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.sns_box a:hover {
+    opacity: 40%;
+}
+
+/* 섹션6 이벤트 */
+.event_bg {
+    background: #000;
+    width: 100%;
+    margin: auto;
+}
+
+.event {
+    width: 100%;
+    margin: 140px auto 0;
+    padding-bottom: 90px;
+}
+
+.event>h1 {
+    color: #fff;
+    text-align: center;
+    padding: 60px 0 15px;
+    margin: 0;
+}
+
+.eve_box {
+    width: 100%;
+    height: 693px;
+    margin: auto;
+}
+
+.event .swiper {
+    width: 820px;
+    /* width: 43%; */
+    /* 슬라이드 개수를 늘리고 가리는 식으로!*/
+}
+
+.event .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 520px;
+    height: 693px;
+}
+
+.event .swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.eve_botton {
+    position: relative;
+}
+
+.event_button_left {
+    position: absolute;
+    top: 50%;
+    left: calc(((100% - 1320px) / 2) + 50px);
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.event_button_right {
+    position: absolute;
+    top: 50%;
+    right: calc(((100% - 1320px) / 2) + 50px);
+    transform: translate(50%, -50%);
+    z-index: 10;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.event_button_click {
+    opacity: 0.7;
+}
+
+/* 섹션7 파트너 */
+.partners {
+    text-align: center;
+    margin: 160px auto 0;
+}
+
+.partners h1 {
+    margin-bottom: 1px;
+}
+
+.partners h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-family: 'SCoreDream';
+}
+
+.par_imgs {
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+    height: 120px;
+    padding: 10px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.par_imgs div {
+    width: 200%;
+    height: 80px;
+    margin: 20px 0;
+    background: url(../image/index/partner_all.png) repeat-x;
+    background-size: contain;
+    position: absolute;
+    animation: par_imgs 10s linear infinite;
+}
+
+@keyframes par_imgs {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -1120px;
+    }
+}
+
+/* 푸터 */
+footer {
+    background: #000;
+    color: #fff;
+}
+
+footer>div {
+    width: 1320px;
+    margin: auto;
+}
+
+footer>div {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 60px 0;
+}
+
+.footer_txt {
+    width: 660px;
+}
+
+.footer_txt img {
+    margin-bottom: 20px;
+}
+
+.footer_txt p {
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+footer ul {
+    margin-top: 20px;
+    width: 250px;
+}
+
+footer li {
+    margin-bottom: 25px;
+}
+
+footer a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 1520px){
+    #scroll-to-top{
+        right: 30px; 
+    }   
+}
