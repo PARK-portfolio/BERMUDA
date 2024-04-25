@@ -287,7 +287,7 @@ nav div {
     width: 100%;
     max-width: 1920px;
     margin: auto;
-    padding: 50px 0;
+    padding: 80px 0 70px;
     display: block;
 }
 
@@ -295,7 +295,7 @@ nav div {
 .item_b{
     width: 1320px;
     margin: auto;
-    padding: 50px 0 80px;
+    padding: 70px 0 80px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -306,6 +306,9 @@ nav div {
 /* 섹션3 뉴 아이템 */
 #newitem{
     padding-bottom: 0;
+}
+.newitem{
+    padding: 70px 0 80px;
 }
 
 /* 푸터 */
