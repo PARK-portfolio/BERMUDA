@@ -308,7 +308,7 @@ nav div {
     padding-bottom: 0;
 }
 .newitem{
-    padding: 70px 0 80px;
+    padding: 70px 0 80px !important;
 }
 
 /* 푸터 */
